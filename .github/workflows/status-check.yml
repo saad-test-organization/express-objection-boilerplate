@@ -1,8 +1,13 @@
 name: actions_on_main_branch
 on: 
-  push:
-    branches:
-      - 'master'
+  pull_request_target:
+    types:
+      - opened
+      - synchronize
+      - reopened
+    branches:    
+      - 'main'
+
 
 jobs:
   job1:
