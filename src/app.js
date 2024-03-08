@@ -23,7 +23,7 @@ const swaggerOptions = {
   apis: ['./src/docs/*.yml','./src/routes/v1/*.js'],
 };
 
-
+// new comment
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
