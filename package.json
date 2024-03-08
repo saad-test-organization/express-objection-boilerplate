@@ -1,0 +1,52 @@
+{
+  "name": "demo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "make-migration": "npx knex migrate:make init --migrations-directory src/db/migrations",
+    "dev": "npm run migrate & node src/index.js",
+    "seed": "npx knex seed:run --knexfile=./src/db/knexfile.js",
+    "make-seed": "npx knex seed:make new-seed --knexfile ./src/db/knexfile.js",
+    "migrate": "npx knex migrate:latest --knexfile ./src/db/knexfile.js",
+    "down": "npx knex migrate:down --knexfile ./src/db/knexfile.js",
+    "test": "jest -i --colors --verbose --detectOpenHandles",
+    "test:watch": "jest -i --watchAll",
+    "coverage": "jest -i --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "author": "saad",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "dotenv-safe": "^9.1.0",
+    "express": "^4.18.2",
+    "express-validation": "^4.1.0",
+    "http-status": "^1.7.4",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
+    "lodash": "^4.17.21",
+    "moment-timezone": "^0.5.45",
+    "morgan": "^1.10.0",
+    "objection": "^3.1.4",
+    "pg": "^8.11.3",
+    "redis": "^4.6.13",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
+    "winston": "^3.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@faker-js/faker": "^8.4.1",
+    "babel-plugin-transform-import-meta": "^2.2.1",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
+  }
+}

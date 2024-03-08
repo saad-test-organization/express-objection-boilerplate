@@ -1,0 +1,12 @@
+# Dependencies
+node_modules
+
+#error logs
+logs
+
+# Environment varibales
+.env*
+!.env*.example
+
+# Code coverage
+coverage
