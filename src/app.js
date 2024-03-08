@@ -28,7 +28,6 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use(bodyParser.json());
 
-//import sampleRoute from './routes/sampleRoute';
 app.use('/v1', router);
 app.use((err, req, res, next) => {
   if (err instanceof ApiError) {
