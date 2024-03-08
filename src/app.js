@@ -28,7 +28,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use(bodyParser.json());
 
-// Your API routes
+// API routes
 //import sampleRoute from './routes/sampleRoute';
 app.use('/v1', router);
 app.use((err, req, res, next) => {
