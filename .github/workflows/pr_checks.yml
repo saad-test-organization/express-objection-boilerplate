@@ -12,7 +12,7 @@ jobs:
   pr_checks:
     runs-on: ubuntu-latest
     env:
-      NAME_ADMIN: Saadi09
+      NAME_ADMIN: Saadi07
     steps:
       - name: st1
         if: ${{ github.actor != env.NAME_ADMIN }}
